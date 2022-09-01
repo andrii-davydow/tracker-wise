@@ -25,13 +25,13 @@ mongoose
 	.then((res) => console.log('connect DB'))
 	.catch((err) => console.log(err));
 
-app.get('/api', (req, res) => {
+app.get('https://tracker-wise.herokuapp.com/api', (req, res) => {
 	Activity.find()
 		.sort({ createdAt: 'desc' })
 		.then((result) => res.json(result))
 		.catch((err) => console.log(err));
 });
-app.get('/api-run-max', (req, res) => {
+app.get('https://tracker-wise.herokuapp.com/api-run-max', (req, res) => {
 	Activity.find({ activity: 'Run' })
 		.sort({ distance: -1 })
 		.limit(1)
@@ -39,14 +39,14 @@ app.get('/api-run-max', (req, res) => {
 		.catch((err) => console.log(err));
 });
 
-app.get('/api-ride-max', (req, res) => {
+app.get('https://tracker-wise.herokuapp.com/api-ride-max', (req, res) => {
 	Activity.find({ activity: 'Ride' })
 		.sort({ distance: -1 })
 		.limit(1)
 		.then((result) => res.json(result))
 		.catch((err) => console.log(err));
 });
-app.get('/api-run', (req, res) => {
+app.get('https://tracker-wise.herokuapp.com/api-run', (req, res) => {
 	Activity.aggregate([
 		{
 			$match: {
@@ -66,7 +66,7 @@ app.get('/api-run', (req, res) => {
 		.catch((err) => console.log(err));
 });
 
-app.get('/api-ride', (req, res) => {
+app.get('https://tracker-wise.herokuapp.com/api-ride', (req, res) => {
 	Activity.aggregate([
 		{
 			$match: {
@@ -86,7 +86,7 @@ app.get('/api-ride', (req, res) => {
 		.catch((err) => console.log(err));
 });
 
-app.post('/api', (req, res) => {
+app.post('https://tracker-wise.herokuapp.com/api', (req, res) => {
 	const { startTime, endTime, distance, activity } = req.body;
 	const activityData = new Activity({ startTime, endTime, distance, activity });
 	activityData
