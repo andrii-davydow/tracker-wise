@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const getData = async () => {
 	try {
-		const response = await axios.get(`http://localhost:5000/api`);
+		const response = await axios.get(`/api`);
 		const data = response.data;
 
 		return data;
@@ -13,7 +13,7 @@ const getData = async () => {
 
 const getRunMax = async () => {
 	try {
-		const response = await axios.get(`http://localhost:5000/api-run-max`);
+		const response = await axios.get(`/api-run-max`);
 		const data = response.data;
 
 		return data;
@@ -24,7 +24,7 @@ const getRunMax = async () => {
 
 const getRideMax = async () => {
 	try {
-		const response = await axios.get(`http://localhost:5000/api-ride-max`);
+		const response = await axios.get(`/api-ride-max`);
 		const data = response.data;
 
 		return data;
@@ -35,7 +35,7 @@ const getRideMax = async () => {
 
 const getRun = async () => {
 	try {
-		const response = await axios.get(`http://localhost:5000/api-run`);
+		const response = await axios.get(`/api-run`);
 		const data = response.data;
 
 		return data;
@@ -46,7 +46,7 @@ const getRun = async () => {
 
 const getRide = async () => {
 	try {
-		const response = await axios.get(`http://localhost:5000/api-ride`);
+		const response = await axios.get(`/api-ride`);
 		const data = response.data;
 
 		return data;
@@ -57,7 +57,7 @@ const getRide = async () => {
 
 const postData = async (obj) => {
 	try {
-		axios.post('http://localhost:5000/api', obj);
+		axios.post('/api', obj);
 	} catch (error) {
 		console.error(error);
 	}
