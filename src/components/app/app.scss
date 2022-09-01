@@ -1,0 +1,41 @@
+@import '../../setings.scss';
+
+.app-name {
+	width: 100%;
+	color: $dark;
+	background: $blue;
+	text-align: center;
+	border: 1px solid $dark;
+
+	@include defaultBlock;
+	h1 {
+		margin: 0;
+	}
+}
+
+.result-activity {
+	width: 28%;
+}
+
+.content-activity {
+	width: 70%;
+	.list-activity {
+		margin-top: 0;
+		width: auto;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.app-name {
+		h1 {
+			font-size: 24px;
+		}
+	}
+	.result-activity,
+	.content-activity {
+		width: 100%;
+	}
+}
+@media (orientation: landscape) and (max-width: 767px) {
+}

@@ -1,0 +1,47 @@
+@import '../../setings.scss';
+.item-activity {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	background: $orange;
+	@include defaultBlock;
+	&.run-activity {
+		background: #f4ddd0;
+	}
+	span {
+		width: 20%;
+		text-align: center;
+		&:first-child {
+			text-align: left;
+		}
+		&:last-child {
+			text-align: right;
+		}
+	}
+	& + .item-activity {
+		margin-top: 20px;
+	}
+}
+
+.empty-data {
+	background: #f4ddd0;
+	@include defaultBlock;
+}
+
+@media only screen and (max-width: 767px) {
+	.item-activity {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		span {
+			font-size: 16px;
+			font-weight: 500;
+			width: 50%;
+			text-align: left !important;
+			margin-bottom: $mt-10;
+			&:nth-child(5) {
+				width: 100%;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

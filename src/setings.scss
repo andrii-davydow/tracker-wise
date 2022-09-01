@@ -1,0 +1,31 @@
+$violet: #f1ebfd;
+$peachy: #fcecec;
+$blue: #cae9fd;
+$green: #ebfef2;
+$orange: #fdf0e9;
+
+$dark: #3c4252;
+$white: #fff;
+
+$mb-20: 20px;
+$p-20: 20px;
+$br-20: 20px;
+$mt-10: 10px;
+$defaultBorder: 1px solid $dark;
+
+@mixin defaultBlock {
+	border: $defaultBorder;
+	padding: $p-20;
+	border-radius: $br-20;
+	margin-bottom: $mb-20;
+}
+
+@mixin resetOutline {
+	&:focus,
+	&:active {
+		outline: 0;
+		outline-offset: 0;
+		box-shadow: none;
+		border-color: #52d583;
+	}
+}

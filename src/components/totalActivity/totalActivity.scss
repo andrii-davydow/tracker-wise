@@ -1,0 +1,34 @@
+@import '../../setings.scss';
+.total-activity {
+	margin-top: 20px;
+	background: $violet;
+	@include defaultBlock;
+	.total-activity-item {
+		color: $dark;
+		font-weight: 500;
+		display: flex;
+		justify-content: space-between;
+		span {
+			font-weight: 400;
+		}
+		& + .total-activity-item {
+			margin-top: $mt-10;
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.total-activity {
+		.total-activity-item {
+			flex-direction: column;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.total-activity {
+		.total-activity-item {
+			flex-direction: row;
+		}
+	}
+}

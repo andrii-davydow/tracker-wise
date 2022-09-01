@@ -1,0 +1,97 @@
+@import '../../setings.scss';
+.add-activity {
+	background: $green;
+	width: 100%;
+	@include defaultBlock;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		width: 18%;
+	}
+	form {
+		width: 80%;
+		display: flex;
+		justify-content: space-between;
+
+		input {
+			width: auto;
+			border: $defaultBorder;
+			border-radius: $br-20;
+			padding: 10px;
+			margin-bottom: 0;
+
+			transition: 0.3s ease-in-out;
+			@include resetOutline;
+		}
+
+		select {
+			width: auto;
+			border: $defaultBorder;
+			border-radius: $br-20;
+			padding: 10px;
+			padding-right: 15px;
+			margin-bottom: 0;
+			@include resetOutline;
+		}
+
+		button {
+			background: $dark;
+			color: $white;
+			transition: 0.3s ease-in-out;
+			border: none;
+			padding: 10px 35px;
+			border-radius: $br-20;
+			cursor: pointer;
+			&:disabled {
+				opacity: 0.7;
+				cursor: auto;
+				&:hover {
+					background: $dark;
+				}
+			}
+			&:hover {
+				background: #52d583;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.add-activity {
+		flex-wrap: wrap;
+		h3 {
+			width: 100%;
+			margin-top: 0;
+		}
+		form {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.add-activity {
+		h3 {
+			text-align: center;
+		}
+		form {
+			flex-wrap: wrap;
+			input {
+				width: 48%;
+				margin-bottom: $mb-20;
+			}
+			select {
+				width: 48%;
+				margin-bottom: $mb-20;
+			}
+			button {
+				width: 100%;
+				padding: 15px;
+				font-size: 16px;
+			}
+		}
+	}
+}
